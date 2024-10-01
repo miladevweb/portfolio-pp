@@ -1,0 +1,14 @@
+.menuHidden {
+  scale: 0;
+  pointer-events: none;
+  animation: showButtonOnScroll 1s linear forwards;
+  animation-timeline: scroll();
+  animation-range: calc(60vh) calc(70vh);
+}
+
+@keyframes showButtonOnScroll {
+  to {
+    scale: 1;
+    pointer-events: initial;
+  }
+}

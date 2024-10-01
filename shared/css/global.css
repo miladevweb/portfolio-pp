@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0d100f;
+    --foreground: #efefef;
+    --primary: #db2500;
+
+    /* Grid Layout */
+    --content-size: 1fr;
+    --breakout-size: 9dvw;
+    --full-width-size: 8dvw;
+    --padding-x-small: 2dvw;
+    --padding-x-large: 4dvw;
+    --padding-y-small: 2dvh;
+    --padding-y-large: 4dvh;
+  }
+
+  @media (width <= 640px) {
+    :root {
+      --breakout-size: 0;
+      --full-width-size: 7dvw;
+    }
+  }
+
+  html {
+    scrollbar-width: none;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-clip min-h-screen;
+  }
+
+  picture {
+    @apply block;
+  }
+
+  img {
+    @apply object-cover size-full;
+  }
+}
+
+@layer components {
+  .main-container {
+    display: grid;
+    grid-template-columns:
+      [full-width-start] var(--full-width-size) [breakout-start]
+      var(--breakout-size) [content-start] var(--content-size) [content-end] var(--breakout-size)
+      [breakout-end] var(--full-width-size) [full-width-end];
+  }
+}
+
+@layer utilities {
+  @keyframes right-translation {
+    from {
+      transform: translateX(-20vw);
+    }
+    to {
+      transform: translateX(-10vw);
+    }
+  }
+
+  @keyframes left-translation {
+    from {
+      transform: translateX(-10vw);
+    }
+    to {
+      transform: translateX(-20vw);
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.asideContainer {
+  & > div {
+    @apply text-[40vw] w-max select-none sm:text-[15vw];
+  }
+}
+
+@media (width >= 1024px) {
+  .labelContainer {
+    @apply flex flex-col-reverse;
+    & > div {
+      @apply w-screen px-[5vw] text-4xl justify-end content-center;
+      & svg {
+        margin-bottom: 10vh;
+      }
+    }
+  }
+}
