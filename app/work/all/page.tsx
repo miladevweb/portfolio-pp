@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { url, works } from '@/constants'
 import { VisitWebsite } from '@/shared/components'
 
@@ -17,41 +18,21 @@ export default function Page() {
         </p>
 
         <div className="relative my-5 lg:my-0 sm:h-[264px]">
-          <picture className="inline-block w-full aspect-[4/3] sm:h-[200px] sm:w-auto sm:absolute sm:left-1/4 sm:bottom-16 lg:right-16 lg:left-auto">
-            <source
-              type="image/webp"
-              srcSet={url('better', 'small')}
-              media="(max-width: 640px)"
-            />
-            <source
-              type="image/webp"
-              srcSet={url('better', 'medium')}
-            />
-            <img
+          <picture className="aspect-[4/3] w-auto sm:h-[200px] sm:absolute sm:left-1/4 sm:bottom-16 lg:right-16 lg:left-auto">
+            <Image
+              fill
+              alt="Better"
               src={url('better', 'small')}
-              alt="#"
-              loading="lazy"
-              className="size-full object-cover"
+              sizes="(max-width: 640px) 50vw, 30vw"
             />
           </picture>
 
-          <picture className="hidden sm:inline-block sm:h-[200px] sm:aspect-[4/3] sm:absolute sm:bottom-0 sm:right-1/4 lg:right-0">
-            <source
-              type="image/webp"
-              media="(max-width: 640px)"
-              srcSet={url('code', 'small')}
-            />
-
-            <source
-              type="image/webp"
-              srcSet={url('code', 'medium')}
-            />
-
-            <img
+          <picture className="hidden w-auto sm:block sm:h-[200px] aspect-[4/3] sm:absolute sm:bottom-0 sm:right-1/4 lg:right-0">
+            <Image
+              fill
+              alt="Code"
+              sizes="30vw"
               src={url('code', 'small')}
-              alt="#"
-              loading="lazy"
-              className="size-full object-cover"
             />
           </picture>
         </div>
@@ -62,9 +43,9 @@ export default function Page() {
           <Link
             key={i}
             href={href}
-            data-link-container
             target="_blank"
-            className="main-container"
+            data-link-container
+            className="main__container"
           >
             <div
               className="col-breakout sm:flex sm:flex-row-reverse sm:justify-between sm:items-center py-[4vh]"

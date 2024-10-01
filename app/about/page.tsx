@@ -1,5 +1,5 @@
 import { url } from '@/constants'
-import { Arrow } from '@/shared/components/svg'
+import { Arrow } from '@/shared/components/global/svgs'
 
 export default function Page() {
   return (

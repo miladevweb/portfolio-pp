@@ -1,27 +1,27 @@
-import WorkCard from './work-card'
 import { works } from '@/constants'
-import WorkButton from './work-button'
-import ScrollContainer from './work-scroll-container'
-import { PreviewImage, VisitWebsite } from '@/shared/components'
+import { PreviewImage, ScrollContainer, WorkButton, WorkCard } from '@/shared/components'
+
+const projects = works.slice(0, 4)
 
 export default function Work() {
   return (
     <>
       <section className="col-full-width sm:col-breakout">
-        {works.slice(0, 4).map(({ title, technologies, thumbnail }, i) => (
+        {projects.map(({ title, technologies, thumbnail }, i) => (
           <WorkCard
             key={i}
-            projectName={title}
+            index={i}
             thumbnail={thumbnail}
+            projectName={title}
             technologies={technologies}
             isLast={works.length === i + 1 ? true : false}
           />
         ))}
-
-        <PreviewImage numberOfImages={4} />
-
-        <VisitWebsite label="V. Details" />
       </section>
+
+      <PreviewImage projects={projects} />
+
+      {/* <VisitWebsite label="V. Details" /> */}
 
       <div className="col-content">
         <WorkButton
@@ -30,7 +30,7 @@ export default function Work() {
         />
       </div>
 
-      <section className="col-full-width hidden gap-y-[5vh] mb-[10vh]  lg:grid overflow-x-clip">
+      <section className="col-full-width hidden gap-y-[5vh] mb-[10vh] lg:grid">
         <ScrollContainer animationName="right-translation" />
 
         <ScrollContainer animationName="left-translation" />

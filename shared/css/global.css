@@ -34,7 +34,7 @@
   }
 
   picture {
-    @apply block;
+    @apply block size-full;
   }
 
   img {
@@ -43,7 +43,7 @@
 }
 
 @layer components {
-  .main-container {
+  .main__container {
     display: grid;
     grid-template-columns:
       [full-width-start] var(--full-width-size) [breakout-start]

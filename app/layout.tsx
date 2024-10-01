@@ -23,7 +23,7 @@ export default function RootLayout({
         className={inter.className}
       >
         <LenisProvider>
-          <div className="main-container">
+          <div className="main__container">
             <Navbar />
 
             {children}

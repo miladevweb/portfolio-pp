@@ -1,8 +1,8 @@
 'use client'
 import { gsap } from 'gsap'
 import { useRef } from 'react'
-import { Arrow } from '../svg'
 import { useGSAP } from '@gsap/react'
+import { Arrow } from '@/shared/components/global/svgs'
 
 gsap.registerPlugin(useGSAP)
 

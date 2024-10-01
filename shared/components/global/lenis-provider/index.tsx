@@ -1,7 +1,14 @@
 'use client'
-import { ReactLenis } from 'lenis/react'
+import { useEffect } from 'react'
+import { ReactLenis, useLenis } from 'lenis/react'
 
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
+  const lenis = useLenis()
+
+  useEffect(() => {
+    if (lenis) lenis.scrollTo(0)
+  }, [lenis])
+
   return (
     <ReactLenis
       root
@@ -10,7 +17,6 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
         smoothWheel: true,
         wheelMultiplier: 1.2,
         touchMultiplier: 1.2,
-        
       }}
     >
       {children}

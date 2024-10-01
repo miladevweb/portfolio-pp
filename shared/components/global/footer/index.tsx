@@ -1,5 +1,5 @@
 import { url } from '@/constants'
-import { Arrow } from '../svg'
+import { Arrow } from '../svgs'
 import Link from 'next/link'
 
 export default function Footer() {
