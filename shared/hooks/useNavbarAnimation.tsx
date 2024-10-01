@@ -1,81 +1,70 @@
-import Lenis from 'lenis'
 import { gsap } from 'gsap'
-import { useCallback, useEffect, useRef } from 'react'
 import { useGSAP } from '@gsap/react'
+import { useLenis } from 'lenis/react'
+import { MutableRefObject, useEffect, useRef, useState } from 'react'
 
 gsap.registerPlugin(useGSAP)
 
-export default function useNavbarAnimation(lenis: Lenis | undefined) {
+export default function useNavbarAnimation(
+  labels: MutableRefObject<HTMLButtonElement[]>,
+  backgroundOne: MutableRefObject<HTMLDivElement>,
+  backgroundTwo: MutableRefObject<HTMLDivElement>,
+  menuContainer: MutableRefObject<HTMLDivElement>,
+) {
+  const lenis = useLenis()
+  const [isOpen, setIsOpen] = useState(false)
   const timeline = useRef<gsap.core.Timeline>(null!)
 
-  const bg1Ref = useRef<HTMLDivElement>(null!)
-  const bg2Ref = useRef<HTMLDivElement>(null!)
-  const labelsRef = useRef<HTMLButtonElement[]>([])
-  const menuContainerRef = useRef<HTMLDivElement>(null!)
-
-  const { contextSafe } = useGSAP(
+  useGSAP(
     () => {
       timeline.current = gsap
         .timeline({
           paused: true,
-
-          defaults: {
-            ease: 'power3.inOut',
-            duration: 0.65,
-          },
+          defaults: { ease: 'power3.inOut', duration: 0.65 },
         })
 
-        .to(bg1Ref.current, {
-          opacity: 1,
-          yPercent: 40,
+        .to(backgroundOne.current, {
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
         })
-        .to(
-          bg2Ref.current,
-          {
-            opacity: 1,
-            yPercent: 20,
-          },
-          '-=0.3',
-        )
+
+        .to(backgroundTwo.current, { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)' }, '-=0.3')
 
         .to(
-          menuContainerRef.current,
+          menuContainer.current,
           {
-            opacity: 1,
-            yPercent: 10,
+            clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
             pointerEvents: 'auto',
           },
           '-=0.3',
         )
 
-        .to(
-          labelsRef.current,
-          {
-            yPercent: -100,
-            opacity: 1,
-            stagger: 0.15,
-          },
-          '-=0.35',
-        )
+        .to(labels.current, { yPercent: -100, opacity: 1, stagger: 0.15 }, '-=0.35')
     },
     { dependencies: [] },
   )
 
-  const addActive = useCallback(() => {
-    if (lenis) lenis.stop()
-    timeline.current.play()
-  }, [lenis, timeline])
+  useEffect(() => {
+    if (lenis) {
+      if (isOpen) {
+        lenis.stop()
+        timeline.current.play()
+      } else {
+        lenis.start()
+        timeline.current.reverse()
+      }
+    }
 
-  const removeActive = useCallback(() => {
-    if (lenis) lenis.start()
-    timeline.current.reverse()
-  }, [lenis, timeline])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isOpen])
+
+  const toggleMenu = () => setIsOpen((prev) => !prev)
 
   /* Handle Escape Key */
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        removeActive()
+      if (e.key === 'Escape' && lenis) {
+        lenis.start()
+        timeline.current.reverse()
       }
     }
 
@@ -83,7 +72,7 @@ export default function useNavbarAnimation(lenis: Lenis | undefined) {
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [removeActive])
+  }, [lenis])
 
-  return { contextSafe, bg1Ref, bg2Ref, labelsRef, menuContainerRef, removeActive, addActive }
+  return { toggleMenu }
 }

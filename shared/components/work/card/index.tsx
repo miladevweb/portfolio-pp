@@ -2,6 +2,7 @@
 import { gsap } from 'gsap'
 import Link from 'next/link'
 import { useRef } from 'react'
+import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 
 gsap.registerPlugin(useGSAP)
@@ -12,9 +13,11 @@ type Props = {
   thumbnail: string
   projectName: string
   technologies: string[]
+
+  isMobile: boolean
 }
 
-export default function WorkCard({ isLast, projectName, technologies, thumbnail, index }: Props) {
+export default function WorkCard({ isLast, projectName, technologies, thumbnail, index, isMobile }: Props) {
   const modalWrapper = useRef<HTMLDivElement>(null!)
   const modalContainer = useRef<HTMLDivElement>(null!)
 
@@ -25,18 +28,21 @@ export default function WorkCard({ isLast, projectName, technologies, thumbnail,
       modalWrapper.current = $('.modal__wrapper')
       modalContainer.current = $('.modal__container')
     },
-    { dependencies: [] },
+    { dependencies: [isMobile] },
   )
 
   const handleMouseEnter = contextSafe(() => {
-    gsap.to(modalContainer.current, { scale: 1 })
+    if (isMobile) return
 
+    gsap.to(modalContainer.current, { scale: 1 })
     gsap.to(modalWrapper.current, {
       yPercent: `${index * -100}`,
     })
   })
 
   const handleMouseLeave = contextSafe(() => {
+    if (isMobile) return
+
     gsap.to(modalContainer.current, { scale: 0 })
   })
 
@@ -48,23 +54,8 @@ export default function WorkCard({ isLast, projectName, technologies, thumbnail,
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <picture className="inline-block col-content h-[22vh] sm:hidden">
-        <source
-          type="image/webp"
-          srcSet={thumbnail}
-        />
-        <img
-          alt="#"
-          src={thumbnail}
-          loading="lazy"
-          className="size-full object-cover"
-        />
-      </picture>
-
       <div className="col-breakout sm:flex sm:justify-between sm:items-center sm:py-[4vh] sm:px-[1vw]">
         <h3 className="text-[9vw] leading-none uppercase lg:text-[50px] sm:text-[4vw]">{projectName}</h3>
-
-        <hr className="opacity-20 my-4 sm:hidden" />
 
         <h4 className="lg:text-sm sm:text-xs">
           {technologies.map((el, i) => (

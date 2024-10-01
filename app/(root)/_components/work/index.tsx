@@ -1,26 +1,9 @@
-import { works } from '@/constants'
-import { PreviewImage, ScrollContainer, WorkButton, WorkCard } from '@/shared/components'
-
-const projects = works.slice(0, 4)
+import { ProjectBlock, ScrollContainer, WorkButton } from '@/shared/components'
 
 export default function Work() {
   return (
     <>
-      <section className="col-full-width sm:col-breakout">
-        {projects.map(({ title, technologies, thumbnail }, i) => (
-          <WorkCard
-            key={i}
-            index={i}
-            thumbnail={thumbnail}
-            projectName={title}
-            technologies={technologies}
-            isLast={works.length === i + 1 ? true : false}
-          />
-        ))}
-      </section>
-
-      <PreviewImage projects={projects} />
-
+      <ProjectBlock howManyProjects={4} />
       {/* <VisitWebsite label="V. Details" /> */}
 
       <div className="col-content">

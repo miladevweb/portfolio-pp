@@ -1,7 +1,8 @@
 import '@/shared/css/global.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Footer, LenisProvider, Navbar } from '@/shared/components'
+import { LenisProvider } from '@/context'
+import { Footer, Navbar } from '@/shared/components'
 
 const inter = Inter({ subsets: ['latin'] })
 

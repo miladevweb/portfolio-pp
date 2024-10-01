@@ -44,6 +44,8 @@
 
 @layer components {
   .main__container {
+    overflow-x: clip;
+
     display: grid;
     grid-template-columns:
       [full-width-start] var(--full-width-size) [breakout-start]
@@ -70,4 +72,8 @@
       transform: translateX(-20vw);
     }
   }
+}
+
+* {
+  /* outline: 2px solid orangered; */
 }
