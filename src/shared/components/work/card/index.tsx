@@ -50,6 +50,7 @@ export default function WorkCard({ isLast, projectName, technologies, index, isM
   return (
     <Link
       href={href}
+      target="_blank"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="sm:col-full-width col-breakout"
