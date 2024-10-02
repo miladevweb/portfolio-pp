@@ -6,7 +6,7 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
   const lenis = useLenis()
 
   useEffect(() => {
-    // if (lenis) lenis.scrollTo(0)
+    if (lenis) lenis.scrollTo(0)
   }, [lenis])
 
   return (
