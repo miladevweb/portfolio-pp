@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #0d100f;
+    --foreground: #efefef;
+    --primary: #db2500;
+
+    /* Grid Layout */
+    --content-size: 1fr;
+    --breakout-size: 9dvw;
+    --full-width-size: 8dvw;
+    --padding-x-small: 2dvw;
+    --padding-x-large: 4dvw;
+    --padding-y-small: 2dvh;
+    --padding-y-large: 4dvh;
+  }
+
+  @media (width <= 640px) {
+    :root {
+      --breakout-size: 0;
+      --full-width-size: 7dvw;
+    }
+  }
+
+  html {
+    scrollbar-width: none;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-clip min-h-screen;
+  }
+
+  picture {
+    @apply block size-full;
+  }
+
+  img {
+    @apply object-cover size-full;
+  }
+}
+
+@layer components {
+  .h1 {
+  }
+
+  .h2 {
+    /* @apply ; */
+  }
+
+  .h3 {
+    @apply uppercase text-[22px] sm:text-[4vw] lg:text-[50px] leading-none font-bold xl:font-semibold;
+  }
+
+  .h4 {
+    @apply uppercase opacity-30 font-semibold text-sm md:text-lg;
+  }
+
+  .main__container {
+    overflow-x: clip;
+
+    display: grid;
+    grid-template-columns:
+      [full-width-start] var(--full-width-size) [breakout-start]
+      var(--breakout-size) [content-start] var(--content-size) [content-end] var(--breakout-size)
+      [breakout-end] var(--full-width-size) [full-width-end];
+  }
+}
+
+@layer utilities {
+  @keyframes right-translation {
+    from {
+      transform: translateX(-20vw);
+    }
+    to {
+      transform: translateX(-10vw);
+    }
+  }
+
+  @keyframes left-translation {
+    from {
+      transform: translateX(-10vw);
+    }
+    to {
+      transform: translateX(-20vw);
+    }
+  }
+}
+
+* {
+  /* outline: 2px solid orangered; */
+}
