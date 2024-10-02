@@ -8,7 +8,7 @@ export const works = [
     technologies: ['Three.js', 'React'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/1-small.webp?alt=media',
     color: '#F8F8F8',
-    href: '#',
+    href: 'https://r3f-bb8.vercel.app/',
   },
 
   {
@@ -16,28 +16,28 @@ export const works = [
     technologies: ['React Three Fiber'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/2-small.webp?alt=media',
     color: '#D200F8',
-    href: '#',
+    href: 'https://r3f-drone.vercel.app/',
   },
   {
     title: 'Disney+ Clone',
     technologies: ['React', 'Swiper'],
-    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/3-small.webp?alt=media',
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
     color: '#1743DD',
-    href: '#',
+    href: 'https://disney-plus-react-pp.vercel.app/',
   },
   {
     title: 'Smooth Scroll',
     technologies: ['GSAP', 'Next.js'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/4-small.webp?alt=media',
     color: '#A7A7D3',
-    href: '#',
+    href: 'https://gsap-zoom-transition.vercel.app/',
   },
   {
     title: 'Modern Website',
     technologies: ['GSAP', 'Lenis'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
     color: '#BBAA22',
-    href: '#',
+    href: 'https://gsap-image-container.vercel.app/',
   },
   {
     title: 'Bag',

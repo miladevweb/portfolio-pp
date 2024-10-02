@@ -1,4 +1,4 @@
-import { WorkButton, ProjectBlock } from '@/shared/components'
+import { WorkButton, ProjectPreview } from '@/shared/components'
 
 export default function Page() {
   return (
@@ -11,7 +11,7 @@ export default function Page() {
         </div>
       </section>
 
-      <ProjectBlock howManyProjects={8} />
+      <ProjectPreview howManyProjects={8} />
       {/* <VisitWebsite label="V. Details" /> */}
 
       <div className="col-breakout">

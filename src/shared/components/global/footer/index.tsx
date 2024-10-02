@@ -1,12 +1,12 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Arrow } from '../svgs'
 import { url } from '@/constants'
-import Image from 'next/image'
 
 export default function Footer() {
   return (
     <div className="bg-white mt-5 text-black relative col-full-width">
-      <section className="h-screen px-[5vw] grid grid-rows-[max-content_45%_1fr] sm:grid-rows-[max-content_25%_1fr]">
+      <section className="h-screen grid grid-rows-[max-content_45%_1fr] sm:grid-rows-[max-content_25%_1fr] px-[2vw] sm:px-[5vw]">
         <div
           id="contact"
           className="grid grid-cols-[80%_20%] py-10 border-b border-dennis relative lg:pt-32 lg:pb-16 lg:w-[70vw] lg:justify-self-center"
@@ -37,7 +37,7 @@ export default function Footer() {
 
           <Link
             href="#contact"
-            className="bg-primary text-white font-bold size-[20vh] rounded-full grid place-items-center absolute bottom-0 right-[8vw] translate-y-1/2 lg:size-[28vh]"
+            className="bg-primary text-white font-bold rounded-full grid place-items-center absolute bottom-0 right-[8vw] translate-y-1/2 size-28 sm:size-40 md:size-52 lg:size-60"
           >
             Get in touch
           </Link>

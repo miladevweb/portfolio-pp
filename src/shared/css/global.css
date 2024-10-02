@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --background: #0d100f;
-    --foreground: #efefef;
-    --primary: #db2500;
+    --background: 160 10% 6%;
+    --foreground: 0 0% 94%;
+    --primary: 10 100% 43%;
 
     /* Grid Layout */
     --content-size: 1fr;
@@ -23,6 +23,11 @@
       --breakout-size: 0;
       --full-width-size: 7dvw;
     }
+  }
+
+  *::selection {
+    background-color: hsl(310deg 100% 50%);
+    
   }
 
   html {

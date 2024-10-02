@@ -1,9 +1,9 @@
-import { ProjectBlock, ScrollContainer, WorkButton } from '@/shared/components'
+import { ProjectPreview, ScrollContainer, WorkButton } from '@/shared/components'
 
 export default function Work() {
   return (
     <>
-      <ProjectBlock howManyProjects={4} />
+      <ProjectPreview howManyProjects={4} />
       {/* <VisitWebsite label="V. Details" /> */}
 
       <div className="col-content">
@@ -13,7 +13,7 @@ export default function Work() {
         />
       </div>
 
-      <section className="col-full-width hidden gap-y-[5vh] mb-[10vh] lg:grid">
+      <section className="col-full-width gap-y-[5vh] mb-[10vh] grid">
         <ScrollContainer animationName="right-translation" />
 
         <ScrollContainer animationName="left-translation" />

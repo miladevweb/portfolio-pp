@@ -6,9 +6,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary)',
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        primary: 'hsl(var(--primary))',
+        foreground: 'hsl(var(--foreground))',
+        background: 'hsl(var(--background))',
       },
 
       gridColumn: {

@@ -1,19 +1,17 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { url, works } from '@/constants'
-import { VisitWebsite } from '@/shared/components'
+import { ProjectVisit } from '@/shared/components'
 
 export default function Page() {
   return (
     <>
-      <div className="col-content h-[15vh] flex items-center lg:h-[35vh]">
-        <h2 className="text-[15vw] leading-none sm:text-6xl lg:text-[8vw]">
-          All Projects <span className="text-[5vw] relative -top-7 sm:text-[2vw] sm:-top-10 lg:-top-[70px]">({works.length})</span>
-        </h2>
+      <div className="col-content leading-none flex justify-center lg:justify-start items-center h-[70px] sm:h-[100px] lg:h-[200px]">
+        <h2 className="font-semibold text-[40px] sm:text-6xl lg:text-[100px]">All Projects</h2>
+        <sup className="text-[10px] sm:text-sm lg:text-base -translate-y-1 lg:-translate-y-4">({works.length})</sup>
       </div>
 
       <div className="col-content grid lg:grid-cols-[50%_40%] sm:justify-between xl:grid-cols-[60%_30%]">
-        <p className="opacity-80 sm:text-2xl xl:text-3xl">
+        <p className="opacity-70 sm:text-2xl xl:text-3xl">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis nisi tenetur esse deserunt facere voluptatem vero dicta ad eos recusandae!
         </p>
 
@@ -40,35 +38,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="pb-[5vh] col-full-width sm:col-breakout">
-        {works.map(({ title, technologies, href }, i) => (
-          <Link
-            key={i}
-            href={href}
-            target="_blank"
-            data-link-container
-            className="main__container"
-          >
-            <div
-              className="col-breakout sm:flex sm:flex-row-reverse sm:justify-between sm:items-center py-[4vh]"
-              data-hover-container
-            >
-              <div className="lg:text-sm sm:text-xs">
-                {technologies.map((el, i) => (
-                  <span key={i}>
-                    {el} {technologies.length !== i + 1 ? <span> - </span> : null}
-                  </span>
-                ))}
-              </div>
-              <h3 className="text-[9vw] leading-none uppercase lg:text-[45px] sm:text-[4vw]">{title}</h3>
-            </div>
-
-            {works.length !== i + 1 ? <hr className="col-breakout opacity-20 sm:col-full-width" /> : null}
-          </Link>
-        ))}
-      </div>
-
-      <VisitWebsite label="Website" />
+      <ProjectVisit />
     </>
   )
 }

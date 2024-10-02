@@ -1,30 +1,24 @@
 import { url } from '@/constants'
 import { Arrow } from '@/shared/components/global/svgs'
+import Image from 'next/image'
 
 export default function Page() {
   return (
     <>
       <div className="col-content mt-5 sm:mt-0">
         <div className="relative">
-          <h1 className="text-[10vw] leading-none pb-y-large border-b border-b-dennis/30 sm:text-[5vw] sm:pt-[12vh] sm:pb-[14vh]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, voluptatum?
+          <h1 className="text-2xl sm:text-[4vw] xl:text-[50px] 2xl:text-[65px] font-medium leading-none pb-y-large border-b border-b-foreground/20 xl:pt-[12vh] xl:pb-[14vh] sm:py-[5vh] lg:py-[10vh]">
+            Working developing software for more than 3 years, using React, Angular, .NET and more!!!
           </h1>
 
-          <picture className="inline-block aspect-square w-[22vw] absolute bottom-0 right-0 -translate-x-1/4 translate-y-1/2 sm:-translate-x-1/2 sm:w-[13vw]">
-            <source
-              type="image/webp"
-              media="(max-width: 640px)"
-              srcSet={url('resume', 'small')}
-            />
-            <source
-              type="image/webp"
-              srcSet={url('resume', 'medium')}
-            />
-            <img
-              alt="#"
-              loading="lazy"
+          <picture className="size-20 md:size-24 lg:size-32 xl:size-44 2xl:size-56 absolute bottom-0 right-0 -translate-x-1/4 translate-y-1/2 sm:-translate-x-1/2">
+            <Image
+              fill
+              priority
+              sizes="30vw"
+              alt="portfolio"
+              className="rounded-full"
               src={url('resume', 'small')}
-              className="size-full object-cover rounded-full"
             />
           </picture>
         </div>
@@ -35,30 +29,17 @@ export default function Page() {
           className="size-5"
           stroke="#FFF"
         />
-        <div className="grid justify-between lg:grid-cols-[20%_70%]">
-          <p className="py-10 lg:py-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam itaque corporis tempora, architecto optio adipisci quibusdam odit rerum dolor natus.</p>
 
-          <picture className="h-[45vh] w-full md:h-[120vh]">
-            <source
-              media="(max-width: 640px)"
-              srcSet={url('building', 'small')}
-              type="image/webp"
-            />
-            <source
-              media="(max-width: 1024px)"
-              srcSet={url('building', 'medium')}
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 1025px)"
-              srcSet={url('building', 'large')}
-              type="image/webp"
-            />
-            <img
-              srcSet={url('building', 'small')}
-              loading="eager"
-              alt="#"
-              className="object-cover size-full"
+        <div className="grid justify-between lg:grid-cols-[20%_70%]">
+          <p className="py-10 lg:py-0 opacity-70">Let&apos;s join together and start sharing the experience of providing quality service to the users who trust us.</p>
+
+          <picture className="h-[45vh] md:h-[60vh] lg:h-[120vh] relative">
+            <Image
+              fill
+              priority
+              alt="building"
+              src={url('building', 'large')}
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 55vw, 60vw"
             />
           </picture>
         </div>

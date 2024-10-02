@@ -8,57 +8,62 @@ gsap.registerPlugin(useGSAP)
 
 type Props = {
   label: string
+  isMobile: boolean
 }
 
-export default function VisitWebsite({ label }: Props) {
-  const modal = useRef({
-    active: false,
-    index: 0,
-  })
-  const buttonContainerRef = useRef<HTMLDivElement>(null!)
+export default function VisitWebsite({ label, isMobile }: Props) {
+  const modal = useRef<HTMLDivElement>(null!)
 
   useGSAP(
     () => {
-      const hoverContainer = gsap.utils.toArray('[data-hover-container]') as unknown as HTMLDivElement[]
+      if (isMobile) return
 
-      hoverContainer.forEach((el, i) => {
-        el.addEventListener('mouseenter', () => {
-          modal.current = { active: true, index: i }
-          buttonContainerRef.current.style.scale = '1'
-        })
+      const $ = (selector: string) => document.querySelector(selector) as HTMLDivElement
 
-        el.addEventListener('mouseleave', () => {
-          modal.current = { active: false, index: i }
-          buttonContainerRef.current.style.scale = '0'
-        })
+      const gridContainer = $('.grid__container')
+
+      gridContainer.addEventListener('mouseenter', () => {
+        gsap.to(modal.current, { scale: 1 })
       })
 
-      const moveContainerX = gsap.quickTo(buttonContainerRef.current, 'left', { duration: 0.8, ease: 'power3' })
-      const moveContainerY = gsap.quickTo(buttonContainerRef.current, 'top', { duration: 0.8, ease: 'power3' })
+      gridContainer.addEventListener('mouseleave', () => {
+        gsap.to(modal.current, { scale: 0 })
+      })
 
-      window.addEventListener('mousemove', (e) => {
+      const moveContainerX = gsap.quickTo(modal.current, 'left', { duration: 0.8, ease: 'power3' })
+      const moveContainerY = gsap.quickTo(modal.current, 'top', { duration: 0.8, ease: 'power3' })
+
+      const handleMove = (e: MouseEvent) => {
         const { pageX, pageY } = e
-
         moveContainerX(pageX)
         moveContainerY(pageY)
-      })
+      }
+
+      window.addEventListener('mousemove', handleMove)
+      return () => {
+        window.removeEventListener('mousemove', handleMove)
+      }
     },
-    { dependencies: [] },
+    { dependencies: [isMobile] },
   )
 
   return (
-    <div
-      style={{ scale: 0 }}
-      ref={buttonContainerRef}
-      className="place-items-center size-[13vw] pointer-events-none bg-primary rounded-full absolute z-10 transition-[scale] duration-500 ease-[cubic-bezier(0.76,_0,_0.24,_1)] -translate-x-1/2 -translate-y-1/2 hidden sm:grid"
-    >
-      <div className="flex items-baseline gap-x-2 text-[2vw]">
-        {label}
-        <Arrow
-          stroke="white"
-          className="size-[1.5vw] -rotate-90"
-        />
-      </div>
-    </div>
+    <>
+      {!isMobile && (
+        <div
+          ref={modal}
+          className="place-items-center size-[13vw] pointer-events-none bg-primary rounded-full absolute z-10 transition-[scale] duration-500 ease-[cubic-bezier(0.76,_0,_0.24,_1)] -translate-x-1/2 -translate-y-1/2 hidden sm:grid scale-0"
+        >
+          <div className="flex items-baseline gap-x-2 text-[2vw]">
+            {label}
+
+            <Arrow
+              stroke="white"
+              className="size-[1.5vw] -rotate-90"
+            />
+          </div>
+        </div>
+      )}
+    </>
   )
 }

@@ -11,16 +11,19 @@ type Props = {
   isLast: boolean
   projectName: string
   technologies: string[]
+  href: string
 
   isMobile: boolean
 }
 
-export default function WorkCard({ isLast, projectName, technologies, index, isMobile }: Props) {
+export default function WorkCard({ isLast, projectName, technologies, index, isMobile, href }: Props) {
   const modalWrapper = useRef<HTMLDivElement>(null!)
   const modalContainer = useRef<HTMLDivElement>(null!)
 
   const { contextSafe } = useGSAP(
     () => {
+      if (isMobile) return
+
       const $ = (selector: string) => document.querySelector(selector) as HTMLDivElement
 
       modalWrapper.current = $('.modal__wrapper')
@@ -46,11 +49,10 @@ export default function WorkCard({ isLast, projectName, technologies, index, isM
 
   return (
     <Link
-      href="/"
-      data-link-container
-      className="sm:col-full-width col-breakout"
+      href={href}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      className="sm:col-full-width col-breakout"
     >
       <div className="flex justify-between items-center py-[4vh] px-[1vw]">
         <div>

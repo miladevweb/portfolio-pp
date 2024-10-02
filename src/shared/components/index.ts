@@ -8,7 +8,8 @@ import WorkCard from './work/card'
 import WorkButton from './work/button'
 import PreviewImage from './work/preview-image'
 import VisitWebsite from './work/visit-website'
-import ProjectBlock from './work/project-block'
+import ProjectPreview from './work/project-preview'
 import ScrollContainer from './work/scroll-container'
+import ProjectVisit from './work/project-visit'
 
-export { Navbar, Footer, VisitWebsite, WorkButton, PreviewImage, WorkCard, ScrollContainer, ProjectBlock, LenisProvider }
+export { Navbar, Footer, VisitWebsite, WorkButton, PreviewImage, WorkCard, ScrollContainer, ProjectPreview, LenisProvider, ProjectVisit }
