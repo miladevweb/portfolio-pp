@@ -18,6 +18,7 @@ export const works = [
     color: '#D200F8',
     href: 'https://r3f-drone.vercel.app/',
   },
+
   {
     title: 'Disney+ Clone',
     technologies: ['React', 'Swiper'],
@@ -25,6 +26,7 @@ export const works = [
     color: '#1743DD',
     href: 'https://disney-plus-react-pp.vercel.app/',
   },
+
   {
     title: 'Smooth Scroll',
     technologies: ['GSAP', 'Next.js'],
@@ -32,6 +34,7 @@ export const works = [
     color: '#A7A7D3',
     href: 'https://gsap-zoom-transition.vercel.app/',
   },
+
   {
     title: 'Modern Website',
     technologies: ['GSAP', 'Lenis'],
@@ -39,20 +42,23 @@ export const works = [
     color: '#BBAA22',
     href: 'https://gsap-image-container.vercel.app/',
   },
+
   {
-    title: 'Bag',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    title: 'Recco',
+    technologies: ['React', 'GSAP'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
     color: '#B8B8AA',
-    href: '#',
+    href: 'https://recco-pp.vercel.app/',
   },
+
   {
-    title: 'Android Studio',
-    technologies: ['React Native', 'Hono', 'Bun'],
+    title: 'Astro directives',
+    technologies: ['Astro', 'React'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
     color: '#E0E0AB',
-    href: '#',
+    href: 'https://astro-frameworks-directives.vercel.app/',
   },
+
   {
     title: 'Apple Studio',
     technologies: ['Vue', 'Solid', 'Svelte'],
@@ -60,6 +66,7 @@ export const works = [
     color: '#CCDD71',
     href: '#',
   },
+
   {
     title: 'Office Studio',
     technologies: ['HTML', 'CSS', 'JavaScript'],
