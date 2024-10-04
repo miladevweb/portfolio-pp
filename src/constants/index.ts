@@ -102,4 +102,28 @@ export const works = [
     color: '#CCDD71',
     href: 'https://tesla-pp.vercel.app/',
   },
+
+  {
+    title: 'Master Grid',
+    technologies: ['HTML', 'CSS'],
+    href: 'https://master-bento-grid-pp.vercel.app/',
+  },
+
+  {
+    title: 'ASP.NET MVC I',
+    technologies: ['C#', '.NET'],
+    href: 'https://github.com/miladevweb/aspnet-mvc-i-pp',
+  },
+
+  {
+    title: 'ASP.NET Web API I',
+    technologies: ['.NET', 'C#'],
+    href: 'https://github.com/miladevweb/aspnet-webapi-i',
+  },
+
+  {
+    title: 'ASP.NET MVC I',
+    technologies: ['C#', '.NET'],
+    href: 'https://github.com/miladevweb/aspnet-mvc-ii-pp',
+  },
 ]
