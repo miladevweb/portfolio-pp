@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Arrow } from '../svgs'
-import { url } from '@/constants'
+import { socials, url } from '@/constants'
 
 export default function Footer() {
   return (
@@ -44,17 +44,23 @@ export default function Footer() {
         </div>
 
         <div className="grid content-center gap-y-3 text-center md:grid-cols-[repeat(2,_max-content)] md:gap-x-3 md:w-[70vw] lg:justify-self-center">
-          <p className="border border-dennis py-5 rounded-full mt-10 md:px-5 md:mt-0">some@gmail.com</p>
-          <p className="border border-dennis py-5 rounded-full md:px-5">+51 999 999 999</p>
+          <p className="border border-dennis py-5 rounded-full mt-10 md:px-5 md:mt-0">ljoel_01@hotmail.com</p>
+          <p className="border border-dennis py-5 rounded-full md:px-5">+51 910 130 163</p>
         </div>
 
         <footer className="grid items-center lg:flex lg:flex-row-reverse lg:justify-between">
           <div>
             <h3>SOCIALS</h3>
 
-            <div className="grid capitalize grid-cols-[repeat(4,_max-content)] gap-x-5">
-              {['facebook', 'instagram', 'linkedIn', 'youtube'].map((el) => (
-                <span key={el}>{el}</span>
+            <div className="grid grid-cols-[repeat(4,_max-content)] gap-x-5">
+              {socials.map((el) => (
+                <Link
+                  key={el.label}
+                  href={el.href}
+                  target='_blank'
+                >
+                  {el.label}
+                </Link>
               ))}
             </div>
           </div>

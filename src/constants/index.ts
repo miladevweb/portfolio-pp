@@ -2,6 +2,18 @@ export const url = (name: string, size: string) => {
   return `https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/${name}-${size}.webp?alt=media`
 }
 
+export const socials = [
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/leonard-joel-cruz-baca-636966319/',
+  },
+
+  {
+    label: 'GitHub',
+    href: 'https://github.com/miladevweb',
+  },
+]
+
 export const works = [
   {
     title: 'BB8',
@@ -25,6 +37,13 @@ export const works = [
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
     color: '#1743DD',
     href: 'https://disney-plus-react-pp.vercel.app/',
+  },
+  {
+    title: 'Hexagonal Architecture',
+    technologies: ['Next.js', 'Hono'],
+    thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
+    color: '#1743DD',
+    href: 'https://nextjs-hexagonal-architecture-pp.vercel.app/',
   },
 
   {
@@ -76,19 +95,11 @@ export const works = [
   },
 
   {
-    title: 'Modern',
-    technologies: ['React', 'Tailwind', 'Django'],
+    title: 'Amazing 3D Shapes',
+    technologies: ['Three.js', 'Next.js'],
     thumbnail: 'images/img2.jpg',
     color: '#D200F8',
-    href: '#',
-  },
-
-  {
-    title: 'There',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img3.jpg',
-    color: '#1743DD',
-    href: '#',
+    href: 'https://r3f-shape-pp.vercel.app/',
   },
 
   {

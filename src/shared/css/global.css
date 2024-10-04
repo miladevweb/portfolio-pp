@@ -25,9 +25,9 @@
     }
   }
 
-  *::selection {
-    background-color: hsl(310deg 100% 50%);
-    
+  ::selection {
+    color: hsl(0deg 0% 100%);
+    background-color: hsl(339, 100%, 50%);
   }
 
   html {
