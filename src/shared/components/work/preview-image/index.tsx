@@ -47,22 +47,25 @@ export default function PreviewImage({ projects, isMobile }: Props) {
       {!isMobile && (
         <div
           ref={container}
-          className="h-[350px] w-[400px] place-items-center absolute z-10 overflow-clip scale-0 transition-[scale] duration-[500ms] ease-[cubic-bezier(0.76,_0,_0.24,_1)] pointer-events-none -translate-x-[50%] -translate-y-[50%] grid modal__container"
+          className="w-[500px] h-[350px] place-items-center absolute z-10 overflow-clip scale-0 transition-[scale] duration-[500ms] ease-[cubic-bezier(0.76,_0,_0.24,_1)] pointer-events-none -translate-x-[50%] -translate-y-[50%] grid modal__container"
         >
-          <div className="size-full absolute modal__wrapper">
-            {projects.map(({ thumbnail, title }, i) => (
-              <picture
+          <div className="absolute size-full inset-0 modal__wrapper">
+            {projects.map(({ thumbnail, title, color }, i) => (
+              <div
                 key={i}
-                className="relative"
+                style={{ backgroundColor: color }}
+                className="size-full grid place-items-center"
               >
-                <Image
-                  alt={title}
-                  src={thumbnail}
-                  //
-                  fill
-                  sizes="10vw"
-                />
-              </picture>
+                <picture className="relative aspect-video w-[80%] h-auto">
+                  <Image
+                    alt={title}
+                    src={thumbnail}
+                    //
+                    fill
+                    sizes="30vw"
+                  />
+                </picture>
+              </div>
             ))}
           </div>
         </div>
