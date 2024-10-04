@@ -120,18 +120,26 @@ export const works = [
   },
 
   {
-    title: 'ASP.NET Web API I',
-    technologies: ['.NET', 'C#'],
-    href: 'https://github.com/miladevweb/aspnet-webapi-i',
+    title: 'ASP.NET MVC II',
+    technologies: ['C#', '.NET'],
+    href: 'https://github.com/miladevweb/aspnet-mvc-ii-pp',
+    thumbnail: '',
+    color: '',
+  },
+
+  {
+    title: 'Next.js Server Actions RHF',
+    technologies: ['Next.js', 'React Query'],
+    href: 'https://github.com/miladevweb/nextjs-server-actions-reactquery-pp',
     color: '',
     thumbnail: '',
   },
 
   {
-    title: 'ASP.NET MVC I',
-    technologies: ['C#', '.NET'],
-    href: 'https://github.com/miladevweb/aspnet-mvc-ii-pp',
-    thumbnail: '',
+    title: 'useOptimistic - Server Actions',
+    technologies: ['.NET', 'C#'],
+    href: 'https://github.com/miladevweb/nextjs-server-actions-useoptimistic-pp',
     color: '',
+    thumbnail: '',
   },
 ]
