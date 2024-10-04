@@ -97,7 +97,7 @@ export const works = [
 
   {
     title: 'Tesla Clone',
-    technologies: ['JavaScript Native APIs'],
+    technologies: ['JavaScript'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
     color: '#CCDD71',
     href: 'https://tesla-pp.vercel.app/',
@@ -137,8 +137,56 @@ export const works = [
 
   {
     title: 'useOptimistic - Server Actions',
-    technologies: ['.NET', 'C#'],
+    technologies: ['Next.js'],
     href: 'https://github.com/miladevweb/nextjs-server-actions-useoptimistic-pp',
+    color: '',
+    thumbnail: '',
+  },
+
+  {
+    title: 'Drag and Drop CRUD',
+    technologies: ['Next.js'],
+    href: 'https://github.com/miladevweb/nextjs-server-actions-useoptimistic-pp',
+    color: '',
+    thumbnail: '',
+  },
+
+  {
+    title: 'Modern Footer',
+    technologies: ['React', 'Tailwind'],
+    href: 'https://github.com/miladevweb/nextjs-server-actions-useoptimistic-pp',
+    color: '',
+    thumbnail: '',
+  },
+
+  {
+    title: 'Mega Menu',
+    technologies: ['React'],
+    href: 'https://github.com/miladevweb/nextjs-server-actions-useoptimistic-pp',
+    color: '',
+    thumbnail: '',
+  },
+
+  {
+    title: 'NGINX Zod Intercepting Routes',
+    technologies: ['React'],
+    href: 'https://github.com/miladevweb/nextjs-server-actions-useoptimistic-pp',
+    color: '',
+    thumbnail: '',
+  },
+
+  {
+    title: 'GSAP - Moder Website',
+    technologies: ['React'],
+    href: 'https://github.com/miladevweb/nextjs-server-actions-useoptimistic-pp',
+    color: '',
+    thumbnail: '',
+  },
+
+  {
+    title: 'Angular 18',
+    technologies: ['Angular'],
+    href: '',
     color: '',
     thumbnail: '',
   },
