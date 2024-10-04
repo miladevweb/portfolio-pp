@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import { url, works } from '@/constants'
+import { works } from '@/constants'
 import { ProjectVisit } from '@/shared/components'
 
 export default function Page() {
@@ -16,18 +15,6 @@ export default function Page() {
           responsive designs for all devices.
         </p>
       </div>
-
-      {/* <div className="col-breakout justify-self-center my-5 lg:my-7 w-full md:w-[35vw] 2xl:w-[30vw]">
-        <picture className="aspect-[4/3] relative">
-          <Image
-            fill
-            alt="Better"
-            priority
-            src={url('better', 'small')}
-            sizes="(max-width: 640px) 50vw, 30vw"
-          />
-        </picture>
-      </div> */}
 
       <ProjectVisit />
     </>

@@ -9,7 +9,7 @@ type Props = {
   animationName: string
 }
 
-export default function ScrollContainer({ animationName, init, end }: Props) {
+export default function Carousel({ animationName, init, end }: Props) {
   const { isMobile } = useResize()
 
   return (

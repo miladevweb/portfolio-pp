@@ -1,4 +1,4 @@
-import { ProjectPreview, ScrollContainer, WorkButton } from '@/shared/components'
+import { ProjectPreview, Carousel, WorkButton } from '@/shared/components'
 
 export default function Work() {
   return (
@@ -13,13 +13,13 @@ export default function Work() {
       </div>
 
       <section className="col-full-width gap-y-[5vh] mb-[10vh] grid">
-        <ScrollContainer
+        <Carousel
           animationName="right-translation"
           init={0}
           end={4}
         />
 
-        <ScrollContainer
+        <Carousel
           animationName="left-translation"
           init={4}
           end={8}
