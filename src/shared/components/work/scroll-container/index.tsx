@@ -16,7 +16,7 @@ export default function ScrollContainer({ animationName, init, end }: Props) {
     <>
       {!isMobile && (
         <div
-          className="flex h-[30vh] w-fit gap-[2.5vw]"
+          className="flex h-[200px] xl:h-[250px] 2xl:h-[30vh] w-fit gap-[2.5vw]"
           style={{
             animation: `${animationName} 1s linear forwards`,
             animationTimeline: 'view()',

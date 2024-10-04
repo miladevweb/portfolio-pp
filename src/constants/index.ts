@@ -19,22 +19,23 @@ export const works = [
     title: 'BB8',
     technologies: ['Three.js', 'React'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/projects%2Fbb8.webp?alt=media',
-    color: '#d90750',
+    color: '#db2500',
     href: 'https://r3f-bb8.vercel.app/',
   },
 
   {
     title: 'Disney+ Clone',
     technologies: ['React', 'Swiper'],
+    color: '#458af7',
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/projects%2Fdisney-plus.webp?alt=media',
-    color: '#e02d2d',
     href: 'https://disney-plus-react-pp.vercel.app/',
   },
+
   {
     title: 'Hexagonal Architecture',
     technologies: ['Next.js', 'Hono'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/projects%2Fhexagonal-architecture.webp?alt=media&token=5579adad-9d58-4594-af59-3596ae0c97ea',
-    color: '#1743DD',
+    color: '#757573',
     href: 'https://nextjs-hexagonal-architecture-pp.vercel.app/',
   },
 
@@ -50,7 +51,7 @@ export const works = [
     title: 'Amazing 3D Shapes',
     technologies: ['Three.js', 'Next.js'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/projects%2Fshape.webp?alt=media',
-    color: '#00ff77',
+    color: '#97e649',
     href: 'https://r3f-shape-pp.vercel.app/',
   },
 
@@ -58,7 +59,7 @@ export const works = [
     title: 'Modern Website',
     technologies: ['GSAP', 'Lenis'],
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/projects%2Fimage-zoom.webp?alt=media',
-    color: '#fad105',
+    color: '#fab005',
     href: 'https://gsap-image-container.vercel.app/',
   },
 
@@ -100,167 +101,5 @@ export const works = [
     thumbnail: 'https://firebasestorage.googleapis.com/v0/b/portfolio-f1335.appspot.com/o/preview-medium.webp?alt=media',
     color: '#CCDD71',
     href: 'https://tesla-pp.vercel.app/',
-  },
-
-  {
-    title: 'Vintage',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img4.jpg',
-    color: '#A7A7D3',
-    href: '#',
-  },
-
-  {
-    title: 'Put',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img5.jpg',
-    color: '#BBAA22',
-    href: '#',
-  },
-
-  {
-    title: 'Bag',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img6.jpg',
-    color: '#B8B8AA',
-    href: '#',
-  },
-  {
-    title: 'Android Studio',
-    technologies: ['React Native', 'Hono', 'Bun'],
-    thumbnail: 'images/img7.jpg',
-    color: '#E0E0AB',
-    href: '#',
-  },
-  {
-    title: 'Apple Studio',
-    technologies: ['Vue', 'Solid', 'Svelte'],
-    thumbnail: 'images/img8.jpg',
-    color: '#CCDD71',
-    href: '#',
-  },
-  {
-    title: 'Office Studio',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img1.jpg',
-    color: '#F8F8F8',
-    href: '#',
-  },
-  {
-    title: 'Modern',
-    technologies: ['React', 'Tailwind', 'Django'],
-    thumbnail: 'images/img2.jpg',
-    color: '#D200F8',
-    href: '#',
-  },
-
-  {
-    title: 'There',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img3.jpg',
-    color: '#1743DD',
-    href: '#',
-  },
-
-  {
-    title: 'Vintage',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img4.jpg',
-    color: '#A7A7D3',
-    href: '#',
-  },
-  {
-    title: 'Put',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img5.jpg',
-    color: '#BBAA22',
-    href: '#',
-  },
-  {
-    title: 'Bag',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img6.jpg',
-    color: '#B8B8AA',
-    href: '#',
-  },
-
-  {
-    title: 'Android Studio',
-    technologies: ['React Native', 'Hono', 'Bun'],
-    thumbnail: 'images/img7.jpg',
-    color: '#E0E0AB',
-    href: '#',
-  },
-
-  {
-    title: 'Apple Studio',
-    technologies: ['Vue', 'Solid', 'Svelte'],
-    thumbnail: 'images/img8.jpg',
-    color: '#CCDD71',
-    href: '#',
-  },
-
-  {
-    title: 'Office Studio',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img1.jpg',
-    color: '#F8F8F8',
-    href: '#',
-  },
-
-  {
-    title: 'Modern',
-    technologies: ['React', 'Tailwind', 'Django'],
-    thumbnail: 'images/img2.jpg',
-    color: '#D200F8',
-    href: '#',
-  },
-
-  {
-    title: 'There',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img3.jpg',
-    color: '#1743DD',
-    href: '#',
-  },
-
-  {
-    title: 'Vintage',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img4.jpg',
-    color: '#A7A7D3',
-    href: '#',
-  },
-
-  {
-    title: 'Put',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img5.jpg',
-    color: '#BBAA22',
-    href: '#',
-  },
-
-  {
-    title: 'Bag',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail: 'images/img6.jpg',
-    color: '#B8B8AA',
-    href: '#',
-  },
-
-  {
-    title: 'Android Studio',
-    technologies: ['React Native', 'Hono', 'Bun'],
-    thumbnail: 'images/img7.jpg',
-    color: '#E0E0AB',
-    href: '#',
-  },
-
-  {
-    title: 'Apple Studio',
-    technologies: ['Vue', 'Solid', 'Svelte'],
-    thumbnail: 'images/img8.jpg',
-    color: '#CCDD71',
-    href: '#',
   },
 ]
