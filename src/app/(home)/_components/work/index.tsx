@@ -4,7 +4,6 @@ export default function Work() {
   return (
     <>
       <ProjectPreview howManyProjects={4} />
-      {/* <VisitWebsite label="V. Details" /> */}
 
       <div className="col-content">
         <WorkButton
@@ -14,9 +13,17 @@ export default function Work() {
       </div>
 
       <section className="col-full-width gap-y-[5vh] mb-[10vh] grid">
-        <ScrollContainer animationName="right-translation" />
+        <ScrollContainer
+          animationName="right-translation"
+          init={0}
+          end={4}
+        />
 
-        <ScrollContainer animationName="left-translation" />
+        <ScrollContainer
+          animationName="left-translation"
+          init={4}
+          end={8}
+        />
       </section>
     </>
   )

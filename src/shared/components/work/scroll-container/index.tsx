@@ -1,13 +1,15 @@
 'use client'
-import { url } from '@/constants'
-import { useResize } from '@/shared/hooks'
 import Image from 'next/image'
+import { works } from '@/constants'
+import { useResize } from '@/shared/hooks'
 
 type Props = {
+  init: number
+  end: number
   animationName: string
 }
 
-export default function ScrollContainer({ animationName }: Props) {
+export default function ScrollContainer({ animationName, init, end }: Props) {
   const { isMobile } = useResize()
 
   return (
@@ -21,19 +23,22 @@ export default function ScrollContainer({ animationName }: Props) {
             animationRange: 'entry 0% exit 100%',
           }}
         >
-          {Array.from({ length: 4 }, (_, i) => (
-            <picture
+          {works.slice(init, end).map(({ color, thumbnail }, i) => (
+            <div
               key={i}
-              className="relative aspect-video"
+              className="grid place-items-center w-[25vw] h-full"
+              style={{ backgroundColor: color }}
             >
-              <Image
-                fill
-                alt="#"
-                sizes="15vw"
-                className="rounded-lg"
-                src={url('preview', 'medium')}
-              />
-            </picture>
+              <picture className="relative aspect-video w-[75%] h-auto">
+                <Image
+                  fill
+                  alt="#"
+                  sizes="30vw"
+                  src={thumbnail}
+                  className="rounded-lg"
+                />
+              </picture>
+            </div>
           ))}
         </div>
       )}

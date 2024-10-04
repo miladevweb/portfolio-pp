@@ -77,19 +77,19 @@
 @layer utilities {
   @keyframes right-translation {
     from {
-      transform: translateX(-20vw);
+      transform: translateX(-10vw);
     }
     to {
-      transform: translateX(-10vw);
+      transform: translateX(0vw);
     }
   }
 
   @keyframes left-translation {
     from {
-      transform: translateX(-10vw);
+      transform: translateX(0vw);
     }
     to {
-      transform: translateX(-20vw);
+      transform: translateX(-10vw);
     }
   }
 }

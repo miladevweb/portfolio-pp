@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 type Props = {
   href: string
   label: string
@@ -6,12 +8,12 @@ type Props = {
 export default function WorkButton({ href, label }: Props) {
   return (
     <div className="h-[30vh] grid place-items-center">
-      <a
+      <Link
         href={href}
         className="border px-16 py-5 rounded-full"
       >
         {label}
-      </a>
+      </Link>
     </div>
   )
 }
