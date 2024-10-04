@@ -34,7 +34,7 @@ export default function Carousel({ animationName, init, end }: Props) {
                   fill
                   alt="#"
                   sizes="30vw"
-                  src={thumbnail}
+                  src={thumbnail!}
                   className="rounded-lg"
                 />
               </picture>
