@@ -74,8 +74,8 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3>LOCAL TIME</h3>
-              <span>Lorem ipsum dolor sit.</span>
+              <h3>COPYRIGHT</h3>
+              <span>No rights reserved</span>
             </div>
           </div>
         </footer>

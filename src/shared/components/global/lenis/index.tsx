@@ -13,10 +13,11 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
     <ReactLenis
       root
       options={{
-        lerp: 0.05,
+        lerp: 0.09,
         smoothWheel: true,
-        wheelMultiplier: 1.2,
+        wheelMultiplier: 1,
         touchMultiplier: 1.2,
+        easing: (t) => t * (2 - t),
       }}
     >
       {children}
