@@ -10,7 +10,7 @@ export const socials = [
 
   {
     label: 'GitHub',
-    href: 'https://github.com/miladevweb',
+    href: 'https://github.com/miladevweb?tab=repositories',
   },
 ]
 
