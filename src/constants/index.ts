@@ -104,6 +104,18 @@ export const works = [
   },
 
   {
+    title: 'Whatsapp Clone - Backend',
+    technologies: ['Express', 'Prisma'],
+    href: 'https://github.com/miladevweb/whatsapp-clone-backend-pp',
+  },
+
+  {
+    title: 'Whatsapp Clone - Frontend',
+    technologies: ['Next.js', 'React Query'],
+    href: 'https://github.com/miladevweb/whasapp-clone-frontend-pp',
+  },
+
+  {
     title: 'Master Grid',
     technologies: ['HTML', 'CSS'],
     href: 'https://master-bento-grid-pp.vercel.app/',
