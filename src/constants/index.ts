@@ -107,12 +107,16 @@ export const works = [
     title: 'Whatsapp Clone - Backend',
     technologies: ['Express', 'Prisma'],
     href: 'https://github.com/miladevweb/whatsapp-clone-backend-pp',
+    color: '',
+    thumbnail: '',
   },
 
   {
     title: 'Whatsapp Clone - Frontend',
     technologies: ['Next.js', 'React Query'],
     href: 'https://github.com/miladevweb/whasapp-clone-frontend-pp',
+    color: '',
+    thumbnail: '',
   },
 
   {
